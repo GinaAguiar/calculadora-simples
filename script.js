@@ -1,5 +1,5 @@
 const display = document.getElementById('display');
-function oppendToDisplay(input) {
+function appendToDisplay(input) {
     if (display.value === "Erro") display.value = "";
     display.value += input;
 }
@@ -28,8 +28,8 @@ function deleteLast() {
 // Suporte ao teclado físico
 document.addEventListener('keydown' , (event) => {
     const key = event.key;
-    if (/[0-9]/.test(key)) oppendToDisplay(key);
-    if (['+', '-', '*', '/'].includes(key)) oppendToDisplay(key);
+    if (/[0-9]/.test(key)) appendToDisplay(key);
+    if (['+', '-', '*', '/'].includes(key)) appendToDisplay(key);
     if (key === 'Enter' || key === '=') calculate();
     if (key === 'Escape') clearDisplay();
     if (key === 'Backspace') display.value = display.value.slice(0, -1);
