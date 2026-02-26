@@ -10,19 +10,20 @@ function clearDisplay() {
 
 function calculate() {
     try {
-        const result = eval(display.value);
+        // Substitui a vírgula visual por ponto para o JavaScript calcular
+        let fixedExpression = display.value.replace(/,/g, '.');
+        
+        const result = eval(fixedExpression);
+
         if (!isFinite(result)) {
             display.value = "Erro";
         } else {
-            display.value = result;
+            // Converte o ponto de volta para vírgula no resultado
+            display.value = result.toString().replace(/\./g, ',');
         }
     } catch (error) {
         display.value = "Erro";
     }
-    }
-    
-function deleteLast() {
-    display.value = display.value.slice(0, -1);
 }
 
 // Suporte ao teclado físico
