@@ -42,6 +42,11 @@ body {
     gap: 12px;
 }
 
+/* NOVIDADE: Faz o botão 0 ocupar duas colunas */
+.double {
+    grid-column: span 2;
+}
+
 button {
     height: 65px;
     font-size: 1.3rem;
