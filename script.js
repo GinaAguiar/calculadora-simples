@@ -27,11 +27,15 @@ function calculate() {
 }
 
 // Suporte ao teclado físico
-document.addEventListener('keydown' , (event) => {
+document.addEventListener('keydown', (event) => {
     const key = event.key;
     if (/[0-9]/.test(key)) appendToDisplay(key);
     if (['+', '-', '*', '/'].includes(key)) appendToDisplay(key);
-    if (key === 'Enter' || key === '=') calculate();
+    if (key === ',' || key === '.') appendToDisplay(',');
+    if (key === 'Enter' || key === '=') {
+        event.preventDefault(); // Evita comportamentos inesperados do Enter
+        calculate();
+    }
     if (key === 'Escape') clearDisplay();
-    if (key === 'Backspace') display.value = display.value.slice(0, -1);
+    if (key === 'Backspace') deleteLast();
 });
