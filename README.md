@@ -15,7 +15,7 @@ Projeto de uma calculadora web desenvolvido utilizando **HTML**, **CSS** e **Jav
 - JavaScript (DOM e eventos)
 
 ## 🌐 Acesse o projeto
-👉 (cole aqui o link do GitHub Pages depois)
+👉 https://ginaaguiar.github.io/Calculadora-Simples/
 
 ---
 
