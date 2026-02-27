@@ -62,7 +62,7 @@ button:active {
 .operator { background-color: #6fa3a8; color: white; }
 .operator:active { background-color: #b1d0d4 !important; }
 
-.clear { background-color: #0d0551; color: white; transform: scale(0.95);}
+.clear { background-color: #0d0551; color: white;}
 .clear:active { background-color: #4a4a8f !important; }
 
 .equal, .delete { background-color: #1f6a8a; color: white;  }
