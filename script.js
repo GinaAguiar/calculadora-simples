@@ -26,6 +26,17 @@ function calculate() {
     }
 }
 
+function deleteLast() {
+    // Se o display mostrar "Erro", limpamos tudo
+    if (display.value === "Erro") {
+        display.value = "";
+    } else {
+        // Remove o último caractere
+        display.value = display.value.slice(0, -1);
+    }
+}
+
+
 // Suporte ao teclado físico
 document.addEventListener('keydown', (event) => {
     const key = event.key;
@@ -36,6 +47,9 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault(); // Evita comportamentos inesperados do Enter
         calculate();
     }
-    if (key === 'Escape') clearDisplay();
-    if (key === 'Backspace') deleteLast();
+    if (key === 'Backspace') {
+        event.preventDefault(); // Evita que o navegador volte a página
+        deleteLast();
+    }
 });
+
